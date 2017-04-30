@@ -102,17 +102,16 @@ function create_config( )
     "Tools",
     "Write"
 	},
-    sudo_users = {377450049},
+    sudo_users = {374734484},
     admins = {},
     disabled_channels = {},
     moderation = {data = './data/moderation.json'},
-    info_text = [[» MaTaDoR v5.2
+    info_text = [[🔥 Spider v5.2
 		
-		»Sudo BoT :
-		» @MahDiRoO
-		
-        
-		v5 https://github.com/MaTaDoRrOo/MaTaDoR
+		🔥Sudo BoT :
+		🔥 @King_Dis_Love
+		------------------
+		🔥Channel:@LockerTeam🔥
 GoOd luck ;))
 ]],
   }
