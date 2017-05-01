@@ -61,7 +61,7 @@ local function get_weather(location)
 	local weather = json:decode(b)
 	local city = weather.name
 	local country = weather.sys.country
-	local temp = 'دمای شهر '..city..' هم اکنون '..weather.main.temp..' درجه سانتی گراد می باشد\n____________________\n  🔥@King_Dis_Love🔥 :)'
+	local temp = 'دمای شهر '..city..' هم اکنون '..weather.main.temp..' درجه سانتی گراد می باشد\n____________________\n  🔥@LockerTeam🔥 :)'
 	local conditions = 'شرایط فعلی آب و هوا : '
 	if weather.weather[1].main == 'Clear' then
 		conditions = conditions .. 'آفتابی☀'
@@ -83,7 +83,7 @@ local function calc(exp)
 	b,c = http.request(url)
 	text = nil
 	if c == 200 then
-    text = 'Result = '..b..'\n____________________\n 🔥@King_Dis_Love🔥 :)'
+    text = 'Result = '..b..'\n____________________\n 🔥@LockerTeam🔥 :)'
 	elseif c == 400 then
 		text = b
 	else
@@ -184,7 +184,7 @@ function run(msg, matches)
 					local pfile = 'data/photos/'..file..'.webp'
 					if file_exi(file..'_(1).jpg', tcpath..'/data/photo', 'jpg') then
 						os.rename(pathf, pfile)
-						tdcli.sendDocument(msg.chat_id_, 0, 0, 1, nil, pfile, ' 🔥@King_Dis_Love🔥', dl_cb, nil)
+						tdcli.sendDocument(msg.chat_id_, 0, 0, 1, nil, pfile, ' 🔥@LockerTeam🔥', dl_cb, nil)
 					else
 						tdcli.sendMessage(msg.to.id, msg.id_, 1, '_This photo does not exist. Send photo again._', 1, 'md')
 					end
@@ -210,7 +210,7 @@ if matches[1]:lower() == 'time' or matches[1]:lower() == 'Time' or matches[1]:lo
 local url , res = http.request('http://irapi.ir/time/')
 if res ~= 200 then return "No connection" end
 local jdat = json:decode(url)
-local text = '*🔥Ir Time:* _'..jdat.FAtime..'_\n*🔥Ir Data:* _'..jdat.FAdate..'_\n------------\n*🔥En Time:* _'..jdat.ENtime..'_\n *🔥En Data:* _'..jdat.ENdate.. '_\n'
+local text = '💥Ir Time:  _'..jdat.FAtime..'_\n💥Ir Data:  _'..jdat.FAdate..'_\n➖➖➖➖➖➖➖➖➖➖\n🔥En Time:  _'..jdat.ENtime..'_\n 🔥En Data:  _'..jdat.ENdate.. '_\n'
   tdcli.sendMessage(msg.chat_id_, 0, 1, text, 1, 'md')
 end
 --------------------------------
@@ -293,7 +293,7 @@ end
 		local url = "https://assets.imgix.net/examples/clouds.jpg?blur=150&w="..w.."&h="..h.."&fit=crop&txt="..eq.."&txtsize="..txtsize.."&txtclr="..txtclr.."&txtalign=middle,center&txtfont=Futura%20Condensed%20Medium&mono=ff6598cc"
 		local receiver = msg.to.id
 		local  file = download_to_file(url,'text.jpg')
-		tdcli.sendPhoto(msg.to.id, 0, 0, 1, nil, file, " 🔥@King_Dis_Love🔥 ", dl_cb, nil)
+		tdcli.sendPhoto(msg.to.id, 0, 0, 1, nil, file, " 🔥@LockerTeam🔥 ", dl_cb, nil)
 	end
 
 end
